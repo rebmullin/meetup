@@ -20,7 +20,7 @@ class Event extends Component {
 
           {!hidden && (
             <>
-              <div className="EventDetails--full">
+              <div className="EventDetails--full extra">
                 <p>status: {event.status}</p>
                 <span>
                   <strong>Date:</strong> {event.local_date}

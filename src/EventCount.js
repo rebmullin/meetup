@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 class EventCount extends Component {
   state = {
-    count: 5
+    count: 32
   };
 
   handleChange = e => {

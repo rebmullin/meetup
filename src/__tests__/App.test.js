@@ -31,7 +31,7 @@ describe("<App /> integration", () => {
     CitySearchWrapper.instance().handleItemClick("value");
     expect(AppWrapper.instance().updateEvents).toHaveBeenCalledTimes(1);
     expect(AppWrapper.instance().updateEvents).toHaveBeenCalledWith(
-      5,
+      32,
       undefined,
       undefined
     );
@@ -46,7 +46,7 @@ describe("<App /> integration", () => {
     CitySearchWrapper.instance().handleItemClick("value", 1.1, 1.2);
     expect(AppWrapper.instance().updateEvents).toHaveBeenCalledTimes(1);
     expect(AppWrapper.instance().updateEvents).toHaveBeenCalledWith(
-      5,
+      32,
       1.1,
       1.2
     );
