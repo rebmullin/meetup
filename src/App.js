@@ -8,7 +8,7 @@ import { getEvents } from "./api";
 class App extends React.Component {
   state = {
     events: [],
-    page: 5,
+    page: 32,
     lat: 0,
     lon: 0
   };
