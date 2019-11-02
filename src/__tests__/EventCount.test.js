@@ -5,7 +5,7 @@ import EventCount from "../EventCount";
 describe("<CitySearch /> component", () => {
   let EventCountWrapper;
   beforeAll(() => {
-    EventCountWrapper = shallow(<EventCount />);
+    EventCountWrapper = shallow(<EventCount updateCount={() => 3} />);
   });
 
   it("render number input", () => {

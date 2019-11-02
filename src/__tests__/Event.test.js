@@ -19,20 +19,22 @@ describe("<Event /> component", () => {
   test("does not render event details in default view", () => {
     expect(EventWrapper.state("hidden")).toBe(true);
   });
+
   test("if the user clicks on 'Show More', event details are displayed", () => {
     EventWrapper.find(".details").simulate("click");
     expect(EventWrapper.state("hidden")).toBe(false);
-    expect(EventWrapper.find(".EventDetails").text("something")).toBe(
-      eventDescription
+    expect(EventWrapper.find(".EventDetails-Description").html()).toEqual(
+      '<p class="EventDetails-Description">' + eventDescription + "</p>"
     );
     expect(EventWrapper.find(".EventDetails")).toHaveLength(1);
   });
+
   test("if the user clicks on 'Show Less', event details will not be displayed", () => {
     EventWrapper.find(".details").simulate("click");
     expect(EventWrapper.state("hidden")).toBe(false);
-    expect(EventWrapper.find(".EventDetails")).toHaveLength(1);
+    expect(EventWrapper.find(".EventDetails--full")).toHaveLength(1);
     EventWrapper.find(".details").simulate("click");
     expect(EventWrapper.state("hidden")).toBe(true);
-    expect(EventWrapper.find(".EventDetails")).toHaveLength(0);
+    expect(EventWrapper.find(".EventDetails--full")).toHaveLength(0);
   });
 });

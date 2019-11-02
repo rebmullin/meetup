@@ -11,12 +11,39 @@ class Event extends Component {
     });
   };
   render() {
+    const { event } = this.props;
+    const { hidden } = this.state;
     return (
       <li className="Event">
-        {!this.state.hidden && (
-          <div className="EventDetails">{this.props.event.description}</div>
-        )}
-        <button onClick={this.handleClick} className="details"></button>
+        <div className="EventDetails">
+          <h3>{event.name}</h3>
+
+          {!hidden && (
+            <>
+              <div className="EventDetails--full">
+                <p>status: {event.status}</p>
+                <span>
+                  <strong>Date:</strong> {event.local_date}
+                </span>
+                &nbsp;
+                <span>
+                  <strong>Time:</strong> {event.local_time}
+                </span>
+                <p
+                  className="EventDetails-Description"
+                  dangerouslySetInnerHTML={{
+                    __html: event.description
+                  }}
+                />
+                <a href={event.link}>{event.link}</a>
+              </div>
+              <br />
+            </>
+          )}
+          <button onClick={this.handleClick} className="details details-btn">
+            {hidden ? "Show Details" : "Hide Details"}
+          </button>
+        </div>
       </li>
     );
   }
