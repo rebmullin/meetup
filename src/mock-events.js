@@ -387,7 +387,7 @@ export const mockEvents = {
  "group": {
  "created": 1537211427000,
  "name": "Joomla User Group München",
- "id": 29852639,
+ "id": 298343335263922,
  "join_mode": "open",
  "lat": 48.13999938964844,
  "lon": 11.579999923706055,
@@ -442,7 +442,7 @@ export const mockEvents = {
  {
  "created": 1567432094000,
  "duration": 10800000,
- "id": "264495082",
+ "id": "334",
  "name": "Mastering the Linux Command Line & Principles of Continuous Delivery and DevOps",
  "rsvp_limit": 120,
  "date_in_series_pattern": false,
@@ -523,7 +523,7 @@ export const mockEvents = {
  {
  "created": 1543406706000,
  "duration": 32400000,
- "id": "256774760",
+ "id": "256774760222",
  "name": "Hack&Jump - Munich's bus tour for coders & developers",
  "date_in_series_pattern": false,
  "status": "upcoming",
@@ -673,7 +673,7 @@ export const mockEvents = {
  "time": 1572544800000,
  "utc_offset": 3600000,
  "name": "Neue Regeln für neue Mitglieder",
- "id": "265750801"
+ "id": "265750801333"
  },
  {
  "created": 1569143472000,
@@ -769,7 +769,7 @@ export const mockEvents = {
  {
  "created": 1561546757000,
  "duration": 7200000,
- "id": "262637434",
+ "id": "26263743422",
  "name": "#NoEstimates-How to improve software development predictability & profitability",
  "rsvp_limit": 140,
  "date_in_series_pattern": false,
@@ -816,7 +816,7 @@ export const mockEvents = {
  {
  "created": 1548145714000,
  "duration": 7200000,
- "id": "258288773",
+ "id": "258288773222",
  "name": "Wie Sie den Mehrwert eines PMOs sichtbar machen können",
  "date_in_series_pattern": false,
  "status": "upcoming",
@@ -861,7 +861,7 @@ export const mockEvents = {
  },
  {
    created: 1371224928000,
-   id: "drpzdgyzpbrb",
+   id: "drpzdgyzpbrb333",
    name: "Ruby User Group Meetup",
    date_in_series_pattern: false,
    status: "upcoming",
@@ -895,7 +895,7 @@ export const mockEvents = {
    {
    "created": 1571344936000,
    "duration": 7200000,
-   "id": "265751488",
+   "id": "2657514882",
    "name": "Winter is coming - Serverless is prepared",
    "date_in_series_pattern": false,
    "status": "upcoming",
@@ -907,7 +907,7 @@ export const mockEvents = {
    "waitlist_count": 0,
    "yes_rsvp_count": 80,
    "venue": {
-   "id": 26219453,
+   "id": 2621945333,
    "name": "Oskar-von-Miller-Ring 20",
    "lat": 48.1448974609375,
    "lon": 11.57638931274414,
@@ -920,7 +920,7 @@ export const mockEvents = {
    "group": {
    "created": 1473068565000,
    "name": "Serverless Munich",
-   "id": 20389664,
+   "id": 203896642,
    "join_mode": "open",
    "lat": 48.13999938964844,
    "lon": 11.579999923706055,
@@ -941,7 +941,7 @@ export const mockEvents = {
    {
    "created": 1564472388000,
    "duration": 30600000,
-   "id": "263577205",
+   "id": "2635772052232",
    "name": "Global Day of Coderetreat @ ThoughtWorks Munich",
    "rsvp_limit": 70,
    "date_in_series_pattern": false,
@@ -955,7 +955,7 @@ export const mockEvents = {
    "waitlist_count": 0,
    "yes_rsvp_count": 38,
    "venue": {
-   "id": 25852478,
+   "id": 2585247866,
    "name": "ThoughtWorks Munich ",
    "lat": 48.135372161865234,
    "lon": 11.613633155822754,
@@ -968,7 +968,7 @@ export const mockEvents = {
    "group": {
    "created": 1413448074000,
    "name": "ThoughtWorks Munich",
-   "id": 17658472,
+   "id": 176584721,
    "join_mode": "open",
    "lat": 48.13999938964844,
    "lon": 11.579999923706055,
@@ -988,7 +988,7 @@ export const mockEvents = {
    {
    "created": 1571209775000,
    "duration": 9000000,
-   "id": "265706638",
+   "id": "2657066381",
    "name": "Evening Workshop on: 'Developing a Coaching Culture in your organisation'",
    "rsvp_limit": 50,
    "date_in_series_pattern": false,
@@ -1001,7 +1001,7 @@ export const mockEvents = {
    "waitlist_count": 2,
    "yes_rsvp_count": 50,
    "venue": {
-   "id": 25615449,
+   "id": 256154491,
    "name": "Henley Business School Germany",
    "lat": 48.13788604736328,
    "lon": 11.583979606628418,
@@ -1014,7 +1014,7 @@ export const mockEvents = {
    "group": {
    "created": 1510684582000,
    "name": "Leadership Events - München",
-   "id": 26598849,
+   "id": 2659884911,
    "join_mode": "open",
    "lat": 48.13999938964844,
    "lon": 11.579999923706055,
@@ -1035,7 +1035,7 @@ export const mockEvents = {
    {
    "created": 1571563126000,
    "duration": 7200000,
-   "id": "265811041",
+   "id": "26581104112",
    "name": "ThoughtWorks University - Wie starte ich meine Karriere in der IT-Branche?",
    "rsvp_limit": 140,
    "date_in_series_pattern": false,
@@ -1048,7 +1048,7 @@ export const mockEvents = {
    "waitlist_count": 0,
    "yes_rsvp_count": 17,
    "venue": {
-   "id": 25852478,
+   "id": 2585247822,
    "name": "ThoughtWorks Munich ",
    "lat": 48.135372161865234,
    "lon": 11.613633155822754,
@@ -1061,7 +1061,7 @@ export const mockEvents = {
    "group": {
    "created": 1413448074000,
    "name": "ThoughtWorks Munich",
-   "id": 17658472,
+   "id": 17658472444,
    "join_mode": "open",
    "lat": 48.13999938964844,
    "lon": 11.579999923706055,
@@ -1082,7 +1082,7 @@ export const mockEvents = {
    {
    "created": 1571482491000,
    "duration": 10800000,
-   "id": "265793159",
+   "id": "2657931592",
    "name": "🎲 Game Night | games provided | 1 free drink",
    "date_in_series_pattern": false,
    "status": "upcoming",
@@ -1094,7 +1094,7 @@ export const mockEvents = {
    "waitlist_count": 0,
    "yes_rsvp_count": 16,
    "venue": {
-   "id": 26609140,
+   "id": 2660914022,
    "name": "GoodWine Bar",
    "lat": 48.11894607543945,
    "lon": 11.571261405944824,
@@ -1129,7 +1129,7 @@ export const mockEvents = {
    {
    "created": 1571213258000,
    "duration": 16200000,
-   "id": "265707272",
+   "id": "26570727233434",
    "name": "IoT and Smart Hardware Showcase 2019",
    "rsvp_limit": 200,
    "date_in_series_pattern": false,
@@ -1164,7 +1164,7 @@ export const mockEvents = {
    {
    "created": 1550042729000,
    "duration": 10800000,
-   "id": "258922181",
+   "id": "258922181222",
    "name": "108. JUG-München Treffen",
    "rsvp_limit": 30,
    "date_in_series_pattern": false,
@@ -1210,7 +1210,7 @@ export const mockEvents = {
    {
    "created": 1550042767000,
    "duration": 10800000,
-   "id": "258922189",
+   "id": "344wew45345",
    "name": "109. JUG-München Treffen",
    "rsvp_limit": 30,
    "date_in_series_pattern": false,
@@ -1256,7 +1256,7 @@ export const mockEvents = {
    {
    "created": 1556806424000,
    "duration": 10800000,
-   "id": "261105044",
+   "id": "26110504433",
    "name": "Teams UserGroup - Ignite Review",
    "rsvp_limit": 40,
    "date_in_series_pattern": false,
@@ -1338,7 +1338,7 @@ export const mockEvents = {
    {
    "created": 1570631402000,
    "duration": 1800000,
-   "id": "265531605",
+   "id": "265531605222",
    "name": "Webinar: Build the Right Things by Voyagent, Inc. Founder",
    "date_in_series_pattern": false,
    "status": "upcoming",
@@ -1417,7 +1417,7 @@ export const mockEvents = {
    {
    "created": 1571223250000,
    "duration": 7200000,
-   "id": "265709123",
+   "id": "265709123333",
    "name": "Best Startups from Hamburg - Pitchnight#1 - München",
    "rsvp_limit": 200,
    "date_in_series_pattern": false,
@@ -1452,7 +1452,7 @@ export const mockEvents = {
    {
    "created": 1571083854000,
    "duration": 7200000,
-   "id": "265668928",
+   "id": "265668928xx3",
    "name": "Abendworkshop - Inner-Leadership: Ein innovativer Ansatz für Transformation",
    "rsvp_limit": 60,
    "date_in_series_pattern": false,
@@ -1527,7 +1527,7 @@ export const mockEvents = {
    {
    "created": 1569143472000,
    "duration": 7200000,
-   "id": "265062898",
+   "id": "26506289833331",
    "name": "Elementor MeetUp München - November 2019",
    "date_in_series_pattern": false,
    "status": "upcoming",
@@ -1573,7 +1573,7 @@ export const mockEvents = {
    },
    {
    "created": 1571559775000,
-   "id": "265810514",
+   "id": "26581051422",
    "name": "Halloween",
    "date_in_series_pattern": false,
    "status": "upcoming",
