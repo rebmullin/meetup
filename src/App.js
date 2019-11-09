@@ -4,17 +4,21 @@ import EventList from "./EventList";
 import CitySearch from "./CitySearch";
 import EventCount from "./EventCount";
 import { getEvents } from "./api";
+import { InfoAlert } from "./Alert";
 
 class App extends React.Component {
   state = {
     events: [],
     page: 32,
     lat: 0,
-    lon: 0
+    lon: 0,
+    infoText: ""
   };
 
   componentDidMount() {
-    getEvents().then(events => this.setState({ events }));
+    getEvents().then(results => {
+      this.setState({ events: results.events, infoText: results.alertMessage });
+    });
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -25,8 +29,15 @@ class App extends React.Component {
   }
 
   updateEvents = (page, lat, lon) => {
-    getEvents(page, lat, lon).then(events =>
-      this.setState({ events, lat, lon })
+    getEvents(page, lat, lon).then(
+      results =>
+        this.setState({
+          events: results.events,
+          infoText: results.alertMessage,
+          lat,
+          lon
+        })
+      // this.setState({ events, lat, lon })
     );
   };
 
@@ -37,6 +48,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
+        <InfoAlert text={this.state.infoText} />
         <CitySearch updateEvents={this.updateEvents} page={this.state.page} />
         <EventCount updateCount={this.updateCount} />
         <EventList events={this.state.events} />

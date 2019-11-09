@@ -50,12 +50,19 @@ export const getSuggestions = async query => {
 
 export const getEvents = async (page = 32, lat, lon) => {
   if (window.location.href.startsWith("http://localhost")) {
-    return mockEvents.events.slice(0, page);
+    return {
+      events: mockEvents.events.slice(0, page),
+      alertMessage: ""
+    };
   }
 
   if (!navigator.onLine) {
     const events = localStorage.getItem("lastEvents");
-    return JSON.parse(events);
+    return {
+      events: JSON.parse(events),
+      alertMessage:
+        "Your app is offline so data has been loaded from the cache and cant be updated til your back online"
+    };
   }
   let token;
 
@@ -83,8 +90,10 @@ export const getEvents = async (page = 32, lat, lon) => {
       // check if the event results exist
       localStorage.setItem("lastEvents", JSON.stringify(events));
     }
-    return events;
-    // return result.data.events;
+    return {
+      events,
+      alertMessage: ""
+    };
   }
   return [];
 };
