@@ -52,6 +52,11 @@ export const getEvents = async (page = 32, lat, lon) => {
   if (window.location.href.startsWith("http://localhost")) {
     return mockEvents.events.slice(0, page);
   }
+
+  if (!navigator.onLine) {
+    const events = localStorage.getItem("lastEvents");
+    return JSON.parse(events);
+  }
   let token;
 
   try {
@@ -73,7 +78,13 @@ export const getEvents = async (page = 32, lat, lon) => {
     }
 
     const result = await axios.get(url);
-    return result.data.events;
+    const { events } = result.data;
+    if (events.length) {
+      // check if the event results exist
+      localStorage.setItem("lastEvents", JSON.stringify(events));
+    }
+    return events;
+    // return result.data.events;
   }
   return [];
 };
