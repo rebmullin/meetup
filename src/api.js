@@ -87,7 +87,7 @@ export const getAccessToken = async () => {
 
     if (!code) {
       window.location.href =
-        "https://secure.meetup.com/oauth2/authorize?client_id=x&response_type=code&redirect_uri=https://rebmullin.github.io/meetup/";
+        "https://secure.meetup.com/oauth2/authorize?client_id=nc5kjkho528g8m428ke0j2pqve&response_type=code&redirect_uri=https://rebmullin.github.io/meetup/";
       return null;
     }
 
