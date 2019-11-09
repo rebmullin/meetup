@@ -61,7 +61,7 @@ export const getEvents = async (page = 32, lat, lon) => {
     return {
       events: JSON.parse(events),
       alertMessage:
-        "Your app is offline so data has been loaded from the cache and cant be updated til your back online"
+        "Your app is offline so data has been loaded from the cache and can't be updated until you're back online"
     };
   }
   let token;
