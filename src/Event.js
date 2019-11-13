@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { PieChart, Pie, Tooltip } from "recharts";
 
 class Event extends Component {
   state = {
@@ -10,6 +11,19 @@ class Event extends Component {
       hidden: !this.state.hidden
     });
   };
+
+  renderCustomTooltip = ({ active, payload }) => {
+    if (active) {
+      return (
+        <div className="custom-tooltip">
+          <p className="label">{`${payload[0].name} : ${payload[0].value}`}</p>
+        </div>
+      );
+    }
+
+    return null;
+  };
+
   render() {
     const { event } = this.props;
     const { hidden } = this.state;
@@ -35,6 +49,20 @@ class Event extends Component {
                     __html: event.description
                   }}
                 />
+                <PieChart width={400} height={400}>
+                  <Pie
+                    dataKey="value"
+                    data={[
+                      { name: "Slots", value: event.rsvp_limit },
+                      { name: "Reservations", value: event.yes_rsvp_count }
+                    ]}
+                    labelLine={false}
+                    outerRadius={80}
+                    fill="#8884d8"
+                    label
+                  />
+                  <Tooltip content={this.renderCustomTooltip} />
+                </PieChart>
                 <a href={event.link}>{event.link}</a>
               </div>
               <br />
