@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { PieChart, Pie, Tooltip } from "recharts";
+import { PieChart, Pie, Tooltip, ResponsiveContainer } from "recharts";
 
 class Event extends Component {
   state = {
@@ -27,6 +27,7 @@ class Event extends Component {
   render() {
     const { event } = this.props;
     const { hidden } = this.state;
+    const showChart = event.rsvp_limit && event.yes_rsvp_count;
     return (
       <li className="Event">
         <div className="EventDetails">
@@ -49,20 +50,24 @@ class Event extends Component {
                     __html: event.description
                   }}
                 />
-                <PieChart width={400} height={400}>
-                  <Pie
-                    dataKey="value"
-                    data={[
-                      { name: "Slots", value: event.rsvp_limit },
-                      { name: "Reservations", value: event.yes_rsvp_count }
-                    ]}
-                    labelLine={false}
-                    outerRadius={80}
-                    fill="#8884d8"
-                    label
-                  />
-                  <Tooltip content={this.renderCustomTooltip} />
-                </PieChart>
+                {showChart && (
+                  <ResponsiveContainer height={400}>
+                    <PieChart>
+                      <Pie
+                        dataKey="value"
+                        data={[
+                          { name: "Slots", value: event.rsvp_limit },
+                          { name: "Reservations", value: event.yes_rsvp_count }
+                        ]}
+                        labelLine={false}
+                        outerRadius={80}
+                        fill="#8884d8"
+                        label
+                      />
+                      <Tooltip content={this.renderCustomTooltip} />
+                    </PieChart>
+                  </ResponsiveContainer>
+                )}
                 <a href={event.link}>{event.link}</a>
               </div>
               <br />
