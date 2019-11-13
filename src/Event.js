@@ -1,5 +1,14 @@
 import React, { Component } from "react";
-import { PieChart, Pie, Tooltip, ResponsiveContainer } from "recharts";
+import {
+  PieChart,
+  Pie,
+  Tooltip,
+  ResponsiveContainer,
+  Cell,
+  Legend
+} from "recharts";
+
+const COLORS = ["#0088FE", "#00C49F"];
 
 class Event extends Component {
   state = {
@@ -24,10 +33,19 @@ class Event extends Component {
     return null;
   };
 
+  getData = () => {
+    const { event } = this.props;
+    return [
+      { name: "Slots", value: event.rsvp_limit },
+      { name: "Reservations", value: event.yes_rsvp_count }
+    ];
+  };
+
   render() {
     const { event } = this.props;
     const { hidden } = this.state;
     const showChart = event.rsvp_limit && event.yes_rsvp_count;
+    const data = this.getData();
     return (
       <li className="Event">
         <div className="EventDetails">
@@ -55,20 +73,26 @@ class Event extends Component {
                     <PieChart>
                       <Pie
                         dataKey="value"
-                        data={[
-                          { name: "Slots", value: event.rsvp_limit },
-                          { name: "Reservations", value: event.yes_rsvp_count }
-                        ]}
+                        data={data}
                         labelLine={false}
                         outerRadius={80}
-                        fill="#8884d8"
                         label
-                      />
+                      >
+                        {data.map((entry, index) => (
+                          <Cell
+                            key={`cell-${index}`}
+                            fill={COLORS[index % COLORS.length]}
+                          />
+                        ))}
+                      </Pie>
                       <Tooltip content={this.renderCustomTooltip} />
+                      <Legend />
                     </PieChart>
                   </ResponsiveContainer>
                 )}
-                <a href={event.link}>{event.link}</a>
+                <p>
+                  <a href={event.link}>{event.link}</a>
+                </p>
               </div>
               <br />
             </>
