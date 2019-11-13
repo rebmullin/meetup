@@ -86,7 +86,7 @@ class Event extends Component {
                         ))}
                       </Pie>
                       <Tooltip content={this.renderCustomTooltip} />
-                      <Legend />
+                      <Legend verticalAlign="middle" align="left" />
                     </PieChart>
                   </ResponsiveContainer>
                 )}
