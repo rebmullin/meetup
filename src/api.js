@@ -49,7 +49,6 @@ export const getSuggestions = async query => {
 };
 
 export const getEvents = async (page = 32, lat, lon) => {
-  console.log("REBB get events hit");
   if (window.location.href.startsWith("http://localhost")) {
     return {
       events: mockEvents.events.slice(0, page),
@@ -57,10 +56,7 @@ export const getEvents = async (page = 32, lat, lon) => {
     };
   }
 
-  console.log("REBB hit1");
-
   if (!navigator.onLine) {
-    console.log("REBB hit2");
     const events = localStorage.getItem("lastEvents");
     return {
       events: JSON.parse(events),
@@ -69,8 +65,6 @@ export const getEvents = async (page = 32, lat, lon) => {
     };
   }
   let token;
-
-  console.log("REBB hit1 token");
 
   try {
     token = await getAccessToken();

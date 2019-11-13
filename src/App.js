@@ -63,15 +63,13 @@ class App extends React.Component {
   };
 
   updateEvents = (page, lat, lon) => {
-    getEvents(page, lat, lon).then(
-      results =>
-        this.setState({
-          events: results.events,
-          infoText: results.alertMessage,
-          lat,
-          lon
-        })
-      // this.setState({ events, lat, lon })
+    getEvents(page, lat, lon).then(results =>
+      this.setState({
+        events: results.events,
+        infoText: results.alertMessage,
+        lat,
+        lon
+      })
     );
   };
 
